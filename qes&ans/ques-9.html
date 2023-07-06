@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      8.You are given a list of items. Write a program that removes all
+      duplicates from the list and displays the result on a web page.
+    </h3>
+    <h2 class="result" id="result"></h2>
+    <script>
+      const result = document.getElementById('result');
+      const items = [
+        'apple',
+        'banana',
+        'orange',
+        'banana',
+        'grape',
+        'apple',
+        'orange',
+      ];
+
+      function removeDuplicates() {
+        const uniqueItems = items.filter((item, index) => {
+          return items.indexOf(item) === index;
+        });
+        return uniqueItems;
+      }
+
+      const uniqueItems = removeDuplicates();
+      result.innerHTML = `Unique Items: ${uniqueItems}`;
+    </script>
+  </body>
+</html>

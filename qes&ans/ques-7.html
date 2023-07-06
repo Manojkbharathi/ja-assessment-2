@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      7. You are given two strings. Write a program that checks if the two
+      strings are anagrams (i.e., the two strings have the same characters but
+      in a different order) and displays the result on a web
+    </h3>
+    <h2 class="result" id="result"></h2>
+    <script>
+      const result = document.getElementById('result');
+      const str1 = 'loin';
+      const str2 = 'lion';
+
+      function areAnagrams() {
+        const sortedStr1 = str1.toLowerCase().split('').sort().join('');
+        const sortedStr2 = str2.toLowerCase().split('').sort().join('');
+
+        if (sortedStr1 === sortedStr2) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      result.innerHTML = `Strings '${str1}' and '${str2}' are ${
+        areAnagrams() ? 'anagrams' : 'not anagrams'
+      }.`;
+    </script>
+  </body>
+</html>

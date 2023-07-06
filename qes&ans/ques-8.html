@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      8. You are given an array of numbers. Write a program that finds the
+      largest and smallest odd // numbers in the array and displays the results
+      on a web page.
+    </h3>
+    <h2 class="result" id="result"></h2>
+
+    <script>
+      const result = document.getElementById('result');
+      const numbers = [2, 5, 7, 1, 45, 8, 7, 12, 3];
+
+      function findLargestSmallestOdd() {
+        let smallestOdd = Infinity;
+        let largestOdd = -Infinity;
+
+        for (let i = 0; i < numbers.length; i++) {
+          const currentNumber = numbers[i];
+
+          if (currentNumber % 2 !== 0) {
+            if (currentNumber < smallestOdd) {
+              smallestOdd = currentNumber;
+            }
+
+            if (currentNumber > largestOdd) {
+              largestOdd = currentNumber;
+            }
+          }
+        }
+
+        return {
+          smallestOdd,
+          largestOdd,
+        };
+      }
+
+      const { smallestOdd, largestOdd } = findLargestSmallestOdd();
+      result.innerHTML = `Smallest Odd: ${smallestOdd}<br>Largest Odd: ${largestOdd}`;
+    </script>
+  </body>
+</html>

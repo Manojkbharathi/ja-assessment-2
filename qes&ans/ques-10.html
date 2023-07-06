@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h3>
+      10. You are given a number. Write a program that checks if the number is a
+      prime number (i.e., only // divisible by 1 and itself) and displays the
+      result on a web page.
+    </h3>
+
+    <h2 class="result" id="result"></h2>
+    <script>
+      const result = document.getElementById('result');
+      const number = 17;
+
+      function isPrime(number) {
+        if (number < 2) {
+          return false;
+        }
+
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+          if (number % i === 0) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      if (isPrime(number)) {
+        result.innerHTML = `${number} is a prime number.`;
+      } else {
+        result.innerHTML = `${number} is not a prime number.`;
+      }
+    </script>
+  </body>
+</html>

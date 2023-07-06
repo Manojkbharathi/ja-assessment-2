@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      5. You are given a string. Write a program that counts the number of
+      vowels in the string and displays the result on a web page. Given
+      input:Skill safari Expected Output:Number of vowels: 4
+    </h3>
+    <h2 class="result" id="result"></h2>
+  </body>
+  <script>
+    const result = document.getElementById('result');
+    const string = 'Manoj bharathi';
+
+    function findVowels() {
+      let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+      let count = 0;
+
+      for (let i = 0; i < string.length; i++) {
+        if (vowels.includes(string[i].toLowerCase())) {
+          count++;
+        }
+      }
+      return count;
+    }
+    result.innerHTML = `Number of vowels in ${string} is ${findVowels(string)}`;
+  </script>
+</html>

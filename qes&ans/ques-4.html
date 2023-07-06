@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./ques-4.html" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      4. You are given a list of items. Write a program that randomly selects an
+      item from the list and displays it on a web page. Given input:Apple,
+      Banana, Orange, Grape, Mango Expected output:When you click submit
+      button,it randomly selects an item from the list.
+    </h3>
+    <button onclick="randomSelect(items)">Submit</button>
+
+    <h2 class="result" id="result"></h2>
+
+    <script>
+      const result = document.getElementById('result');
+      const items = ['apple', 'banana', 'orange', 'grape', 'mango'];
+
+      function randomSelect() {
+        const random = Math.floor(Math.random() * items.length);
+        const selects = items[random];
+        result.innerHTML = selects;
+      }
+    </script>
+  </body>
+</html>

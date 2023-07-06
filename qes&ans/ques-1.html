@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      1. You are given two numbers. Write a program that finds the sum,
+      difference, product, and quotient of the two numbers and displays the
+      results on a web page. Given input: 8, 9.
+    </h3>
+    <h1>Answer:1</h1>
+
+    <h2 class="result" id="result"></h2>
+    <script>
+      const result = document.getElementById('result');
+
+      let num1 = 8;
+      let num2 = 9;
+
+      // calculation
+      let sum = num1 + num2;
+      let difference = num1 - num2;
+      let product = num1 * num2;
+      let quotient = num1 + num2;
+
+      result.innerHTML += `Sum: ${sum} <br>`;
+      result.innerHTML += `Difference: ${difference} <br>`;
+      result.innerHTML += `Product: ${product} <br>`;
+      result.innerHTML += `Quotient: ${quotient} <br>`;
+    </script>
+  </body>
+</html>
